@@ -2,6 +2,7 @@
 // Step 2: npm install bcryptjs cloudinary cors dotenv express jsonwebtoken mongoose socket.io
 // Step 3: npm install nodemon
 // Step 4: Set up .env file with MongoDB and PORT
+// Step 5: Set up Cloudinary in .env
 
 import express from "express";
 import "dotenv/config";
