@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs"
 import cloudinary from "../lib/cloudinary.js";
 
 // Signup a new user
-export const Signup = async (req, res)=>{
+export const signup = async (req, res)=>{
     const {fullName, email, password, bio} = requestAnimationFrame.body;
 
     try {
