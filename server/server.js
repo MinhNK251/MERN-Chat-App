@@ -12,14 +12,13 @@ import { connectDB } from "./lib/db.js";
 import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
-import { Socket } from "dgram";
 
 // Create Express app and HTTP server
 const app = express();
 const server = http.createServer(app)
 
 // Initialize socket.io server
-export const io = new Server({
+export const io = new Server(server, {
     cors: {origin: "*"}
 })
 
