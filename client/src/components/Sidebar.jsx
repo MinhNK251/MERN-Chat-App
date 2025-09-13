@@ -51,7 +51,7 @@ const Sidebar = () => {
             ${selectedUser?._id === user._id && 'bg-[#282142]/50'}`}>
                 
                 <img src={user?.profilePic || assets.avatar_icon} alt=""
-                className='w-[35px] aspect-[1/1] rounded-full' />
+                className='w-[35px] aspect-square object-cover rounded-full' />
 
                 <div className='flex flex-col'>
                     <p>{user.fullName}</p>

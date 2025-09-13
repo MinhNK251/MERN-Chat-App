@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import toast from 'react-hot-toast';
@@ -42,10 +43,10 @@ export const ChatProvider = ({ children })=>{
     const sendMessage = async (messageData)=> {
         try {
             const {data} = await axios.post(`/api/messages/send/${selectedUser._id}`, messageData);
-            if(data.success) {
-                setMessages((prevMessages)=>[...prevMessages, data.newMessage])
+            if (data.success) {
+                setMessages((prevMessages) => [...prevMessages, data.newMessage]);
             } else {
-                toast.error(error.message)
+                toast.error(data.message || "Failed to send message");
             }
         } catch (error) {
             toast.error(error.message)
